@@ -433,6 +433,12 @@ article.team-member {
     justify-content: space-between;
     
 }
+.article-cont h4 {
+  margin-top: 0 !important;
+}
+.article-cont h3 {
+  margin-bottom: 6px !important;
+}
 .contact a {
     display: inline-block;
     margin-left: 12px;
