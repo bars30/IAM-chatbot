@@ -1,7 +1,7 @@
 export const uiTexts = {
   siteTitle: "IAM Recruitment partner.",
   siteSubtitle: "Connecting German companies with the IAM experts.",
-  greetingHeader: "Hi there! I'm your IAM hiring partner in Germany.",
+  greetingHeader: "Hi there! I'm your <span>IAM hiring partner</span> in Germany.",
   greetingSub: "How can I assist you today?",
   placeholder: "Type your question here…",
   menuItems: [

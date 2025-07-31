@@ -129,29 +129,7 @@ menuButtons.forEach((btn) => {
   const input = document.querySelector(".send-message");
 
 
-  if (promptsSection.classList.contains("fade-out")) {
-  chatboxMessages.classList.remove("display");
-} else {
-  if (!!localStorage.getItem('chatHistory')) {
-    chatboxMessages.classList.remove("display");
-  } else {
 
-  chatboxMessages.classList.add("display");
-  }
-}
-
-setTimeout(() => {
-    if (promptsSection.classList.contains("fade-out")) {
-  chatboxMessages.classList.remove("display");
-} else {
-  if (!!localStorage.getItem('chatHistory')) {
-    chatboxMessages.classList.remove("display");
-  } else {
-
-  chatboxMessages.classList.add("display");
-  }
-}
-}, 1500);
 
 function restoreChatHistory() {
   const savedHistory = localStorage.getItem("chatHistory");
@@ -278,7 +256,6 @@ function getBotReply(prompt) {
     btn.addEventListener("click", () => {
       const selectedPrompt = btn.textContent;
 
-chatboxMessages.classList.remove("display");
       promptButtons.forEach(b => b.disabled = true);
       promptsSection.classList.add("fade-out");
 
@@ -352,7 +329,6 @@ sendBtn.disabled = !true;
 
   questionsBtn.addEventListener("click", () => {
     const footerPrompts = document.querySelector(".quick-prompts-footer");
-    chatboxMessages.classList.remove("display");
     if (footerPrompts.style.display === "flex") {
       footerPrompts.classList.remove("fade-in");
       footerPrompts.classList.add("fade-out");
@@ -455,7 +431,6 @@ clearBtns.forEach(btn => {
 });
 
 sendBtn.addEventListener("click", () => {
-  chatboxMessages.classList.remove("display");
 setTimeout(() => {
     const userInput = chatboxInput.value.trim();
   if (!userInput && selectedFiles.length === 0) return;
