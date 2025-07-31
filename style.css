@@ -9,7 +9,7 @@
  --brand-blue: #389EF8;
  --brand-yellow: #FDBF42;
 
---bg-page: #19212E;
+  --bg-page: #19212E;
   --bg-chatbox: #333942;
   --bg-language-switch: #2D343E;
   --prompt-bg: #2E343F;
@@ -35,21 +35,8 @@
  --32px: 2rem;
  --40px: 2.5rem;
 }
-/* body.dark-mode {
-  --bg-page: #19212E;
-  --bg-chatbox: #242B37;
-  --bg-language-switch: #2D343E;
-  --prompt-bg: #2E343F;
-  --prompt-text: #F1F2F2;
-  --border-color: #3A414B;
-  --text-subtitle: #B0B8C1;
-  --text-placeholder: #A0AAB4;
-  --text-dark: #ffffff;
-  --header-footer: #333942;
-  --button-shadow: #6c788d;
-} */
 body {
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-default);
 }
 p {
   font-size: var(--16px);
@@ -309,7 +296,7 @@ h3 {
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: all 0.4s ease;
+  transition: var(--transition-default);
   width: 0;
   padding: 0;
 }
@@ -386,7 +373,7 @@ label.upload-btn {
     display: flex;
     width: fit-content;
     justify-content: space-between;
-    transition: width 0.4s ease;
+    transition: width 0.3s ease;
 }
 
 .bot-message p {
@@ -478,7 +465,7 @@ hr {
 .fade-out {
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 
 }
@@ -526,7 +513,7 @@ hr {
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 .chatbox-messages::-webkit-scrollbar {
   display: none; 
@@ -592,7 +579,7 @@ a {
 .fade-in {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 #logo-dark {
   display: none;
@@ -809,7 +796,7 @@ h2.logo-header-title {
   left: 0;
   right: 0;
   bottom: 0;
-  transition: 0.4s;
+  transition: 0.3s;
   overflow: hidden;
 }
 
@@ -822,7 +809,7 @@ h2.logo-header-title {
   bottom: 4px;
   background-color: #999;
   border-radius: 50%;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .icon {
@@ -832,7 +819,7 @@ h2.logo-header-title {
   height: 12px;
   transform: translateY(-50%);
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
 .moon-icon {
