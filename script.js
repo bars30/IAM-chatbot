@@ -306,6 +306,8 @@ function getBotReply(prompt) {
         } else {
           const element = document.querySelector('.new-bot-message');
           if (element) {
+            console.log("🥶🥶🥶" ,element);
+            
             element.classList.remove("new-bot-message");
           }
           botMsg.classList.add("new-bot-message");
@@ -486,7 +488,10 @@ setTimeout(() => {
     <p>Leider kann ich diese Frage nicht direkt beantworten, aber einer unserer Berater wird sich in Kürze mit Ihnen in Verbindung setzen.</p>
   `;
     }
-    const newBotEl = addMessage(fullResponse, "bot");
+    const newBotEl = addMessage(fullResponse, "bot", true, () => {
+  chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+});
+
 const element = document.querySelector('.new-bot-message');
           if (element) {
             element.classList.remove("new-bot-message");
@@ -510,7 +515,10 @@ chatState = "done";
       }
 
 
-const newBotEl = addMessage(fullResponse, "bot", false); 
+const newBotEl = addMessage(fullResponse, "bot", true, () => {
+  chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+});
+
 
     const element = document.querySelector('.new-bot-message');
           if (element) {
